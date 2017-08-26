@@ -84,8 +84,8 @@ $(document).ready(function(){
 
 	//check screen size
 	var windowsize = $(window).width();
-	//code for scrolling effect when not in mobile
     if(windowsize >= 768){
+	//code for scrolling effect when not in mobile
 		$(window).scroll(function(){
 		   var scroll = $(window).scrollTop();
 			  if (scroll > 200) {
@@ -107,6 +107,7 @@ $(document).ready(function(){
 	 	})
 
 	}else{
+	//disables search box on scroll
 		$(window).scroll(function(){
 		   var scroll = $(window).scrollTop();
 			  if (scroll > 200) {
