@@ -101,12 +101,21 @@ $(document).ready(function(){
 				$("#nav-bar").css("background-color" , 'transparent');
 				$(".navbar-nav li > a").css("color" , "#ffffff");
 			  	$(".fa-search").css("color" , "#ffffff");
-			  		$(".main_logo3").attr('src', 'res/Hublot-logo-white.png');				     
+			  	$(".main_logo3").attr('src', 'res/Hublot-logo-white.png');				     
 				$(".main_logo").attr('src', 'res/Hublot_logo_white.png').removeClass('changed');		
 			  }
 	 	})
-	}
 
+	}else{
+		$(window).scroll(function(){
+		   var scroll = $(window).scrollTop();
+			  if (scroll > 200) {
+		        $("form").removeClass('show');
+			  	$("#nav-bar").css("height", "40px")
+			    $(".main_logo").attr('src', 'res/Hublot_logo.png').addClass('changed'); 
+			  }
+	 	})
+	}
 
 	//prevent overlapping with dorpdown
 	$("#navbar-toggle").click(function() {;	
