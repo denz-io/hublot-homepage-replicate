@@ -1,15 +1,13 @@
 $(document).ready(function(){
-
+	//scroll to top on reload
     $(this).scrollTop(0);
-
 	//set tool tips to appropriate position
 	$('[data-toggle="tooltip"]').tooltip();  
 	//code for search dropdown
 	$("#search").click(function() {;
-
 		 //check if window is scrolled to the top
 		 var scroll = $(window).scrollTop();		
-		
+		//check screen position first before actions
 		 if (scroll > 200) {
   				$("input").focus();
 	  			setTimeout( function(){
@@ -55,9 +53,8 @@ $(document).ready(function(){
 
 	//code for search dropdown mobile
 	$("#search-mobile").click(function() {;
-
 		 var scroll = $(window).scrollTop();	
-
+		 //check screen position first before actions
 		 if (scroll > 200) {
   				$("input").focus();
 				$("#nav-bar").css("height" , "350px");		     
@@ -65,7 +62,6 @@ $(document).ready(function(){
 	            $(".main_logo").addClass('changed');   
 			    $("form").toggleClass("show").slideDown();
 		 }else{
-			 
 		     if (!$(".main_logo").hasClass('changed')) {
 		     	$("input").focus();
 				$("#nav-bar").css("height" , "300px");
