@@ -7,9 +7,10 @@ $(document).ready(function(){
 	//code for search dropdown
 	$("#search").click(function() {;
 
+		 //check if window is scrolled to the top
 		 var scroll = $(window).scrollTop();		
+		
 		 if (scroll > 200) {
-
   				$("input").focus();
 	  			setTimeout( function(){
 				$("#nav-bar").css("background-color" , "#ffffff");
@@ -82,9 +83,7 @@ $(document).ready(function(){
       	 		}
 	});
 
-	//check screen size
-	var windowsize = $(window).width();
-    if(windowsize >= 768){
+    if($(window).width() >= 768){
 	//code for scrolling effect when not in mobile
 		$(window).scroll(function(){
 		   var scroll = $(window).scrollTop();
@@ -109,12 +108,14 @@ $(document).ready(function(){
 	}else{
 	//disables search box on scroll
 		$(window).scroll(function(){
-		   var scroll = $(window).scrollTop();
-			  if (scroll > 200) {
-		        $("form").removeClass('show');
-			  	$("#nav-bar").css("height", "40px")
-			    $(".main_logo").attr('src', 'res/Hublot_logo.png').addClass('changed'); 
-			  }
+		    var scroll = $(window).scrollTop();
+		   	if ($("form").hasClass('show')) {
+			    if (scroll > 200) {
+			        $("form").removeClass('show');
+				  	$("#nav-bar").css("height", "40px")
+				    $(".main_logo").attr('src', 'res/Hublot_logo.png').addClass('changed');
+			    }
+			}
 	 	})
 	}
 
@@ -125,11 +126,10 @@ $(document).ready(function(){
 	  			$("#nav-bar").css("height" , "40px");
 		        $(".main_logo").removeClass('changed');
 		}
-
-		if(check1==false){
-			check1=true;
-		}else{
-			check1=false;
-		}	
+			if(check1==false){
+				check1=true;
+			}else{
+				check1=false;
+			}
 	});
 });
