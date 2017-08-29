@@ -143,7 +143,7 @@ $(document).ready(function(){
 		    $(".main_logo").removeClass('changed');
 		
 		}
-		
+
 		//disable search when dropdown is toggled	
 		$("#search-mobile").toggleClass('disable_search');
 	});
