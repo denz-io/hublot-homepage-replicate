@@ -671,46 +671,8 @@ form {padding-top: 0px;
 }
 
 @media (max-width: 428px) { 
-
-    #nav-bar{background-color: #ffffff;
-      z-index: 1;
-      -webkit-transition: height  0.5s ease-in-out;
-      -moz-transition: height 0.5s ease-in-out;
-      -ms-transition:  height 0.5s ease-in-out;
-      -o-transition: height 0.5s ease-in-out;
-      transition: height 0.5s ease-in-out;}
-
-    .navbar-toggle{position: absolute; left: 0px; background-color: #ffffff;}
-
-    .fa-bars{color: #000000;}
     
-    .main_logo{display: none; z-index: -1;}
-
-    .main_logo2{height: 40px; display: block;}
-
-    .main_logo3{display: none; z-index: -1;}
-
-    .main_logo2:focus{outline: 0;}
-
     #main_logo2{position: relative; left: 44%; top: -15px;}
-    
-    .navbar-collapse {background-color: #ffffff;}
-
-    .navbar-collapse ul{width: 100%; padding-left: 100px;}
-
-    .navbar-collapse li{width: 100%;}
-
-    .navbar-collapse li > a{ color: #000000;}
-
-    #try1 { position: absolute;  right: 50px; top: 0px; }
-    #try1 i { color: #b4b5b4; }
-    #try1 i:hover { color: #000000; }
-    #try1 a:focus { color: #000000; outline: none; text-decoration: none;}
-
-    #try2 { position: absolute;  right: 90px; top: 0px; }
-    #try2 a { color: #b4b5b4; font-weight: bold;}
-    #try2 a:hover { color: #000000; text-decoration: none;}
-    #try2 a:focus { color: #b4b5b4; outline: none; text-decoration: none;}
 
     .carousel-inner{text-align: center; 
       margin-top: 35%; 
@@ -730,50 +692,9 @@ form {padding-top: 0px;
       transition: height 0.2s linear;
     }
 
-    .show {height: 200px;}
+    .big-bang{position: absolute; padding-left: 50px; top: 240px;}
 
-    [type="search"] {background-image: url(../../res/search_icon.png);
-      background-position: 10px center;
-      background-repeat: no-repeat;
-      text-indent: 40px;
-      width: 100%;
-      margin: 0;
-      height: 60px; 
-      border: 1px solid rgba(0, 0, 0, 0.8);
-      border-color : #d0d0d0;
-      background-color: none;
-      font-size: 1.5em;
-      font-family: "Georgia", serif;
-      color: rgba(0, 0, 0, 0.6);
-      -moz-border-radius:20px; /* Firefox */
-      -webkit-border-radius: 50px; /* Safari, Chrome */
-      -khtml-border-radius: 50px; /* KHTML */
-      border-radius: 30px; /* CSS3 */
-      -webkit-transition: all 0.2s;
-      -moz-transition: all 2s;
-      transition: all 0.2s;
-      display: block;
-      
-    }
-    .inner-addon { position: relative; }
-
-    .inner-addon .glyphicon {position: absolute; padding-top: 20px;pointer-events: none; font-size: 1.5em;}
-
-    .nav-watch{position: absolute; 
-        top: 30px; 
-        height: 474px; 
-        width: 80%;
-        left: -10%; 
-        float: left; 
-        z-index: -1;}
-
-    .nav-background{position: absolute; top:0px; height: 674px; width: 100%; z-index: -1;}
-
-    .share-bot{position: absolute; top:100px; left: 40px;}
-
-    .big-bang{position: absolute; padding-left: 20px; top: 240px;}
-
-    .big-bang2{position: absolute; padding-left: 20px; top: 390px;}
+    .big-bang2{position: absolute; padding-left: 40px; top: 390px;}
 
     .collage{position: relative;
       font-family: 'Roboto';
@@ -816,52 +737,14 @@ form {padding-top: 0px;
     height:100px;}
 }
 
-@media (max-width: 365px) { 
-
-    #nav-bar{background-color: #ffffff;
-    z-index: 1;
-    -webkit-transition: height  0.5s ease-in-out;
-    -moz-transition: height 0.5s ease-in-out;
-    -ms-transition:  height 0.5s ease-in-out;
-    -o-transition: height 0.5s ease-in-out;
-    transition: height 0.5s ease-in-out;}
-
-    .navbar-toggle{position: absolute; left: 0px; background-color: #ffffff;}
-
-    .fa-bars{color: #000000;}
-    
-    .main_logo{display: none; z-index: -1;}
-
-    .main_logo2{height: 40px; display: block;}
-
-    .main_logo2:focus{outline: 0;}
+@media (max-width: 360px) { 
 
     #main_logo2{position: relative; left: 42%; top: -15px;}
-    
-    .navbar-collapse {background-color: #ffffff;}
 
-    .navbar-collapse ul{width: 100%; padding-left: 100px;}
+    .big-bang{position: absolute; padding-left: 20px; top: 240px;}
 
-    .navbar-collapse li{width: 100%;}
-
-    .navbar-collapse li > a{ color: #000000;}
-
-    #try1 { position: absolute;  right: 50px; top: 0px; }
-    #try1 i { color: #b4b5b4; }
-    #try1 i:hover { color: #000000; }
-    #try1 a:focus { color: #000000; outline: none; text-decoration: none;}
-
-    #try2 { position: absolute;  right: 90px; top: 0px; }
-    #try2 a { color: #b4b5b4; font-weight: bold;}
-    #try2 a:hover { color: #000000; text-decoration: none;}
-    #try2 a:focus { color: #b4b5b4; outline: none; text-decoration: none;}
-
-    .carousel-inner{text-align: center; 
-      margin-top: 35%; 
-      font-family: Arial,Helvetica Neue,Helvetica,sans-serif;}
-    
-    .carousel-inner .item h5{padding-left: 10px; padding-right: 10px;}
-      
+    .big-bang2{position: absolute; padding-left: 40px; top: 390px;}
+          
     form {padding-top: 0px;
       margin: 0x auto;
       position: absolute;
@@ -871,34 +754,6 @@ form {padding-top: 0px;
       height: 0;
       overflow: hidden;
       transition: height 0.2s linear;}
-
-    .show {height: 200px;}
-
-    [type="search"] {background-image: url(../../res/search_icon.png);
-      background-position: 10px center;
-      background-repeat: no-repeat;
-      text-indent: 40px;
-      width: 100%;
-      margin: 0;
-      height: 60px; 
-      border: 1px solid rgba(0, 0, 0, 0.8);
-      border-color : #d0d0d0;
-      background-color: none;
-      font-size: 1.5em;
-      font-family: "Georgia", serif;
-      color: rgba(0, 0, 0, 0.6);
-      -moz-border-radius:20px; /* Firefox */
-      -webkit-border-radius: 50px; /* Safari, Chrome */
-      -khtml-border-radius: 50px; /* KHTML */
-      border-radius: 30px; /* CSS3 */
-      -webkit-transition: all 0.2s;
-      -moz-transition: all 2s;
-      transition: all 0.2s;
-      display: block;}
-
-    .inner-addon { position: relative; }
-
-    .inner-addon .glyphicon {position: absolute; padding-top: 20px;pointer-events: none; font-size: 1.5em;}
 
     .nav-watch{position: absolute; 
         top: 30px; 
@@ -910,10 +765,6 @@ form {padding-top: 0px;
 
     .nav-background{position: absolute; top:0px; height: 674px; width: 100%; z-index: -1;}
 
-    .share-bot{position: absolute; top:100px; left: 40px;}
-
-    .big-bang{position: absolute; padding-left: 20px; top: 240px;}
-
     .big-bang2{position: absolute; padding-left: 20px; top: 410px;}
 
     .collage{position: relative;
@@ -923,8 +774,6 @@ form {padding-top: 0px;
       box-sizing: border-box;
       position: relative;
       border: none;}
-
-    .collage--spotlight {height: 100vh; border: none;}
 
     .spotlight__item {position: absolute;}
 
