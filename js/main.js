@@ -4,11 +4,12 @@ $(document).ready(function(){
 	//set tool tips to appropriate position
 	$('[data-toggle="tooltip"]').tooltip();  
 	//code for search dropdown
-	$("#search").click(function() {;
-		 //check if window is scrolled to the top
-		 var scroll = $(window).scrollTop();		
+	$("#search").click(function() {
+		//check if window is scrolled to the top
+		var scroll = $(window).scrollTop();		
 		//check screen position first before actions
-		 if (scroll > 200) {
+		if (scroll > 200) {
+  				
   				$("input").focus();
 	  			setTimeout( function(){
 				$("#nav-bar").css("background-color" , "#ffffff");
@@ -20,11 +21,11 @@ $(document).ready(function(){
 		        $(".main_logo").addClass('changed');
 				}, 200); 
    			    $("form").toggleClass("show").slideDown();
+		
+		}else{
 
-		 }else{
-			 
-		     if (!$(".main_logo").hasClass('changed')) {
-		 	 
+		    if (!$(".main_logo").hasClass('changed')) {
+	
   				$("input").focus();
 		     	setTimeout( function(){
 		 	    $("form").toggleClass("show").slideDown();
@@ -36,7 +37,9 @@ $(document).ready(function(){
 		        $(".main_logo").attr('src', 'res/Hublot_logo.png');
 		        $(".main_logo3").attr('src', 'res/Hublot-logo-219x286.png');		
 		        $(".main_logo").addClass('changed');   
-		     }else{
+		    
+		    }else{
+		    
 		     	$("form").toggleClass("show").slideDown();
 	  			$("#nav-bar").css("background-color" , "transparent");
 		    	$("#nav-bar").css("height" , "70px");
@@ -45,39 +48,51 @@ $(document).ready(function(){
 		        $(".main_logo").attr('src', 'res/Hublot_logo_white.png');
 		        $(".main_logo3").attr('src', 'res/Hublot-logo-white.png');		       
 		        $(".main_logo").removeClass('changed');
-		     }
-		 }
+		    
+		    }
+		}
 	});
 
 	//code for search dropdown mobile
-	$("#search-mobile").click(function() {;
-		 var scroll = $(window).scrollTop();	
-		 //check screen position first before actions
-		 if (scroll > 200) {
+	$("#search-mobile").click(function() {
+		
+		var scroll = $(window).scrollTop();	
+		//check screen position first before actions
+		if (scroll > 200) {
+  		
   				$("input").focus();
 				$("#nav-bar").css("height" , "350px");		     
 			    $(".main_logo").attr('src', 'res/Hublot_logo.png');
 	            $(".main_logo").addClass('changed');   
 			    $("form").toggleClass("show").slideDown();
-		 }else{
-		     if (!$(".main_logo").hasClass('changed')) {
+		
+		}else{
+	    
+	        if (!$(".main_logo").hasClass('changed')) {
+		
 		     	$("input").focus();
 				$("#nav-bar").css("height" , "300px");
 		        $(".main_logo").addClass('changed');     
      	    	$("form").toggleClass("show").slideDown();
-		     }else{
+     	
+     	    }else{
+		
 		     	$("form").toggleClass("show").slideDown();
 	  			$("#nav-bar").css("height" , "40px");
 		        $(".main_logo").removeClass('changed');
-		     }
-		 }
+		
+		    }
+		}
 	});
 
     if($(window).width() >= 768){
 	//code for scrolling effect when not in mobile
 		$(window).scroll(function(){
-		   var scroll = $(window).scrollTop();
-			  if (scroll > 200) {
+		    
+		    var scroll = $(window).scrollTop();
+			
+			if (scroll > 200) {
+		    
 		        $("form").removeClass('show');
 			  	$("#nav-bar").css("height", "70px")
 			    $("#nav-bar").css("background-color" , "#ffffff");
@@ -85,25 +100,34 @@ $(document).ready(function(){
 			  	$(".fa-search").css("color" , "#000000");	
 			  	$(".main_logo3").attr('src', 'res/Hublot-logo-219x286.png');
 				$(".main_logo").attr('src', 'res/Hublot_logo.png').addClass('changed'); 
-			  }
-			  else{
+			
+			}
+		    
+		    else{
+			
 				$("#nav-bar").css("background-color" , 'transparent');
 				$(".navbar-nav li > a").css("color" , "#ffffff");
 			  	$(".fa-search").css("color" , "#ffffff");
 			  	$(".main_logo3").attr('src', 'res/Hublot-logo-white.png');				     
 				$(".main_logo").attr('src', 'res/Hublot_logo_white.png').removeClass('changed');		
-			  }
+			
+			}
 	 	})
 
 	}else{
 	//disables search box on scroll
 		$(window).scroll(function(){
+		    
 		    var scroll = $(window).scrollTop();
+		   	
 		   	if ($("form").hasClass('show')) {
+			
 			    if (scroll > 200) {
+			
 			        $("form").removeClass('show');
 				  	$("#nav-bar").css("height", "40px")
 				    $(".main_logo").attr('src', 'res/Hublot_logo.png').addClass('changed');
+			
 			    }
 			}
 	 	})
@@ -111,11 +135,15 @@ $(document).ready(function(){
 
 	//prevent overlapping with dorpdown
 	$("#navbar-toggle").click(function() {;	
+		
 		if ($("form").hasClass('show')) {
+		
 			$("form").toggleClass("show").slideDown();
 	  		$("#nav-bar").css("height" , "40px");
 		    $(".main_logo").removeClass('changed');
+		
 		}
+		
 		//disable search when dropdown is toggled	
 		$("#search-mobile").toggleClass('disable_search');
 	});
@@ -126,11 +154,14 @@ $(document).ready(function(){
 $( window ).resize(function() {
 	location.reload();
 
-	 if($(window).width() >= 768){
+	if($(window).width() >= 768){
 	//code for scrolling effect when not in mobile
 		$(window).scroll(function(){
-		   var scroll = $(window).scrollTop();
-			  if (scroll > 200) {
+		    
+		    var scroll = $(window).scrollTop();
+			
+			if (scroll > 200) {
+		    
 		        $("form").removeClass('show');
 			  	$("#nav-bar").css("height", "70px")
 			    $("#nav-bar").css("background-color" , "#ffffff");
@@ -138,22 +169,26 @@ $( window ).resize(function() {
 			  	$(".fa-search").css("color" , "#000000");	
 			  	$(".main_logo3").attr('src', 'res/Hublot-logo-219x286.png');
 				$(".main_logo").attr('src', 'res/Hublot_logo.png').addClass('changed'); 
-			  }
-			  else{
+			
+			}else{
+				
 				$("#nav-bar").css("background-color" , 'transparent');
 				$(".navbar-nav li > a").css("color" , "#ffffff");
 			  	$(".fa-search").css("color" , "#ffffff");
 			  	$(".main_logo3").attr('src', 'res/Hublot-logo-white.png');				     
 				$(".main_logo").attr('src', 'res/Hublot_logo_white.png').removeClass('changed');		
-			  }
+			
+			}
 	 	})
 
 	}else{
+		
 		$(".navbar-nav li > a").css("color" , "#ffffff");
-		$("#nav-bar").css("height", "40px")
-	//disables search box on scroll
+		$("#nav-bar").css("height", "40px");
+
+		//disables search box on scroll
 		$(window).scroll(function(){
-		    var scroll = $(window).scrollTop();
+		var scroll = $(window).scrollTop();
 		   	if ($("form").hasClass('show')) {
 			    if (scroll > 200) {
 			        $("form").removeClass('show');
