@@ -134,7 +134,8 @@ $(document).ready(function(){
 
 //reset scroll property on device size change
 $( window ).resize(function() {
-
+	location.reload();
+	
 	 if($(window).width() >= 768){
 	//code for scrolling effect when not in mobile
 		$(window).scroll(function(){
