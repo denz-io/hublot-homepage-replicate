@@ -73,10 +73,6 @@ $(document).ready(function(){
 		        $(".main_logo").removeClass('changed');
 		     }
 		 }
-		 	    //toggle dropdown	
-			    if (check1==true) { 	
-		  		     $( "#navbar-toggle" ).click();
-      	 		}
 	});
 
     if($(window).width() >= 768){
@@ -119,23 +115,19 @@ $(document).ready(function(){
 	$("#navbar-toggle").click(function() {;	
 		if ($("form").hasClass('show')) {
 			$("form").toggleClass("show").slideDown();
-	  			$("#nav-bar").css("height" , "40px");
-		        $(".main_logo").removeClass('changed');
+	  		$("#nav-bar").css("height" , "40px");
+		    $(".main_logo").removeClass('changed');
 		}
-			if(check1==false){
-				check1=true;
-			}else{
-				check1=false;
-			}
+		//disable search when dropdown is toggled
+		$("#search-mobile").toggleClass('disable_search');
 	});
 });
-
 
 
 //reset scroll property on device size change
 $( window ).resize(function() {
 	location.reload();
-	
+
 	 if($(window).width() >= 768){
 	//code for scrolling effect when not in mobile
 		$(window).scroll(function(){
