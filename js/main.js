@@ -49,8 +49,6 @@ $(document).ready(function(){
 		 }
 	});
 
-	var check1=false;
-
 	//code for search dropdown mobile
 	$("#search-mobile").click(function() {;
 		 var scroll = $(window).scrollTop();	
@@ -118,7 +116,7 @@ $(document).ready(function(){
 	  		$("#nav-bar").css("height" , "40px");
 		    $(".main_logo").removeClass('changed');
 		}
-		//disable search when dropdown is toggled
+		//disable search when dropdown is toggled	
 		$("#search-mobile").toggleClass('disable_search');
 	});
 });
