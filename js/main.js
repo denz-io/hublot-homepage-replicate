@@ -152,7 +152,6 @@ $(document).ready(function(){
 
 //reset scroll property on device size change
 $( window ).resize(function() {
-	location.reload();
 
 	if($(window).width() >= 768){
 	//code for scrolling effect when not in mobile
@@ -181,22 +180,13 @@ $( window ).resize(function() {
 			}
 	 	})
 
-	}else{
-		
-		$(".navbar-nav li > a").css("color" , "#ffffff");
-		$("#nav-bar").css("height", "40px");
-
-		//disables search box on scroll
-		$(window).scroll(function(){
-		var scroll = $(window).scrollTop();
-		   	if ($("form").hasClass('show')) {
-			    if (scroll > 200) {
-			        $("form").removeClass('show');
-				  	$("#nav-bar").css("height", "40px")
-				    $(".main_logo").attr('src', 'res/Hublot_logo.png').addClass('changed');
-			    }
-			}
-	 	})
 	}
+});
+//check if on mobile and reload page to reset js script
+$( window ).resize(function() {
 
+	if($(window).width() < 768){
+		location.reload();
+	}
+	
 });
